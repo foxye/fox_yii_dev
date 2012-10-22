@@ -1,0 +1,272 @@
+2012/10/22 07:33:11 [error] [php] include(User.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (E:\wamp\www\yii\framework\YiiBase.php:418)
+Stack trace:
+#0 E:\wamp\www\foxweb\protected\components\UserIdentity.php(35): spl_autoload_call()
+#1 E:\wamp\www\foxweb\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 E:\wamp\www\yii\framework\validators\CInlineValidator.php(43): LoginForm->authenticate()
+#3 E:\wamp\www\yii\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute()
+#4 E:\wamp\www\yii\framework\base\CModel.php(158): CInlineValidator->validate()
+#5 E:\wamp\www\foxweb\protected\controllers\SiteController.php(88): LoginForm->validate()
+#6 E:\wamp\www\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#7 E:\wamp\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#8 E:\wamp\www\yii\framework\web\CController.php(287): SiteController->runAction()
+#9 E:\wamp\www\yii\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#10 E:\wamp\www\yii\framework\web\CWebApplication.php(276): SiteController->run()
+#11 E:\wamp\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#12 E:\wamp\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 E:\wamp\www\foxweb\index.php(13): CWebApplication->run()
+REQUEST_URI=/foxweb/index.php?r=site/login
+in E:\wamp\www\foxweb\protected\components\UserIdentity.php (35)
+in E:\wamp\www\foxweb\protected\models\LoginForm.php (52)
+in E:\wamp\www\foxweb\protected\controllers\SiteController.php (88)
+2012/10/22 07:39:46 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tbl_users` `t` WHERE LOWER(username)=? LIMIT 1.
+in E:\wamp\www\foxweb\protected\components\UserIdentity.php (36)
+in E:\wamp\www\foxweb\protected\models\LoginForm.php (52)
+in E:\wamp\www\foxweb\protected\controllers\SiteController.php (88)
+2012/10/22 07:39:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tbl_users` `t` WHERE LOWER(username)=? LIMIT 1' in E:\wamp\www\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 E:\wamp\www\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 E:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 E:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 E:\wamp\www\foxweb\protected\components\UserIdentity.php(36): CActiveRecord->find('LOWER(username)...', Array)
+#4 E:\wamp\www\foxweb\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#5 E:\wamp\www\yii\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#6 E:\wamp\www\yii\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 E:\wamp\www\yii\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#8 E:\wamp\www\foxweb\protected\controllers\SiteController.php(88): CModel->validate()
+#9 E:\wamp\www\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 E:\wamp\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 E:\wamp\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 E:\wamp\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 E:\wamp\www\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#14 E:\wamp\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#15 E:\wamp\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 E:\wamp\www\foxweb\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/foxweb/index.php?r=site/login
+HTTP_REFERER=http://localhost/foxweb/index.php?r=site/login
+---
+2012/10/22 07:39:57 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tbl_users` `t` WHERE LOWER(username)=? LIMIT 1.
+in E:\wamp\www\foxweb\protected\components\UserIdentity.php (36)
+in E:\wamp\www\foxweb\protected\models\LoginForm.php (52)
+in E:\wamp\www\foxweb\protected\controllers\SiteController.php (88)
+2012/10/22 07:39:57 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'username' in 'where clause'. The SQL statement executed was: SELECT * FROM `tbl_users` `t` WHERE LOWER(username)=? LIMIT 1' in E:\wamp\www\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 E:\wamp\www\yii\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 E:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 E:\wamp\www\yii\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 E:\wamp\www\foxweb\protected\components\UserIdentity.php(36): CActiveRecord->find('LOWER(username)...', Array)
+#4 E:\wamp\www\foxweb\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#5 E:\wamp\www\yii\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#6 E:\wamp\www\yii\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#7 E:\wamp\www\yii\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#8 E:\wamp\www\foxweb\protected\controllers\SiteController.php(88): CModel->validate()
+#9 E:\wamp\www\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#10 E:\wamp\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 E:\wamp\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 E:\wamp\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 E:\wamp\www\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#14 E:\wamp\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#15 E:\wamp\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 E:\wamp\www\foxweb\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/foxweb/index.php?r=site/login
+HTTP_REFERER=http://localhost/foxweb/index.php?r=site/login
+---
+2012/10/22 07:41:36 [error] [exception.CException] exception 'CException' with message 'Property "User.salt" is not defined.' in E:\wamp\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 E:\wamp\www\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('salt')
+#1 E:\wamp\www\foxweb\protected\models\User.php(118): CActiveRecord->__get('salt')
+#2 E:\wamp\www\foxweb\protected\components\UserIdentity.php(40): User->validatePassword('123456')
+#3 E:\wamp\www\foxweb\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#4 E:\wamp\www\yii\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#5 E:\wamp\www\yii\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 E:\wamp\www\yii\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#7 E:\wamp\www\foxweb\protected\controllers\SiteController.php(88): CModel->validate()
+#8 E:\wamp\www\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#9 E:\wamp\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 E:\wamp\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 E:\wamp\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\wamp\www\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#13 E:\wamp\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#14 E:\wamp\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 E:\wamp\www\foxweb\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/foxweb/index.php?r=site/login
+HTTP_REFERER=http://localhost/foxweb/index.php?r=site/login
+---
+2012/10/22 07:42:14 [error] [exception.CException] exception 'CException' with message 'Property "User.password" is not defined.' in E:\wamp\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 E:\wamp\www\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('password')
+#1 E:\wamp\www\foxweb\protected\models\User.php(118): CActiveRecord->__get('password')
+#2 E:\wamp\www\foxweb\protected\components\UserIdentity.php(40): User->validatePassword('123456')
+#3 E:\wamp\www\foxweb\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#4 E:\wamp\www\yii\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#5 E:\wamp\www\yii\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 E:\wamp\www\yii\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#7 E:\wamp\www\foxweb\protected\controllers\SiteController.php(88): CModel->validate()
+#8 E:\wamp\www\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#9 E:\wamp\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 E:\wamp\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 E:\wamp\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\wamp\www\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#13 E:\wamp\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#14 E:\wamp\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 E:\wamp\www\foxweb\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/foxweb/index.php?r=site/login
+HTTP_REFERER=http://localhost/foxweb/index.php?r=site/login
+---
+2012/10/22 07:42:17 [error] [exception.CException] exception 'CException' with message 'Property "User.password" is not defined.' in E:\wamp\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 E:\wamp\www\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('password')
+#1 E:\wamp\www\foxweb\protected\models\User.php(118): CActiveRecord->__get('password')
+#2 E:\wamp\www\foxweb\protected\components\UserIdentity.php(40): User->validatePassword('123456')
+#3 E:\wamp\www\foxweb\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#4 E:\wamp\www\yii\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#5 E:\wamp\www\yii\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 E:\wamp\www\yii\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#7 E:\wamp\www\foxweb\protected\controllers\SiteController.php(88): CModel->validate()
+#8 E:\wamp\www\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#9 E:\wamp\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 E:\wamp\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 E:\wamp\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\wamp\www\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#13 E:\wamp\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#14 E:\wamp\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 E:\wamp\www\foxweb\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/foxweb/index.php?r=site/login
+HTTP_REFERER=http://localhost/foxweb/index.php?r=site/login
+---
+2012/10/22 07:42:58 [error] [exception.CException] exception 'CException' with message 'Property "User.password" is not defined.' in E:\wamp\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 E:\wamp\www\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('password')
+#1 E:\wamp\www\foxweb\protected\models\User.php(118): CActiveRecord->__get('password')
+#2 E:\wamp\www\foxweb\protected\components\UserIdentity.php(40): User->validatePassword('123456')
+#3 E:\wamp\www\foxweb\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#4 E:\wamp\www\yii\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#5 E:\wamp\www\yii\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 E:\wamp\www\yii\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#7 E:\wamp\www\foxweb\protected\controllers\SiteController.php(88): CModel->validate()
+#8 E:\wamp\www\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#9 E:\wamp\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 E:\wamp\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 E:\wamp\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\wamp\www\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#13 E:\wamp\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#14 E:\wamp\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 E:\wamp\www\foxweb\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/foxweb/index.php?r=site/login
+HTTP_REFERER=http://localhost/foxweb/index.php?r=site/login
+---
+2012/10/22 07:44:15 [error] [exception.CException] exception 'CException' with message 'Property "User.password" is not defined.' in E:\wamp\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 E:\wamp\www\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('password')
+#1 E:\wamp\www\foxweb\protected\models\User.php(118): CActiveRecord->__get('password')
+#2 E:\wamp\www\foxweb\protected\components\UserIdentity.php(40): User->validatePassword('123456')
+#3 E:\wamp\www\foxweb\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#4 E:\wamp\www\yii\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#5 E:\wamp\www\yii\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 E:\wamp\www\yii\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#7 E:\wamp\www\foxweb\protected\controllers\SiteController.php(88): CModel->validate()
+#8 E:\wamp\www\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#9 E:\wamp\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 E:\wamp\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 E:\wamp\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\wamp\www\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#13 E:\wamp\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#14 E:\wamp\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 E:\wamp\www\foxweb\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/foxweb/index.php?r=site/login
+HTTP_REFERER=http://localhost/foxweb/index.php?r=site/login
+---
+2012/10/22 07:44:17 [error] [exception.CException] exception 'CException' with message 'Property "User.password" is not defined.' in E:\wamp\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 E:\wamp\www\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('password')
+#1 E:\wamp\www\foxweb\protected\models\User.php(118): CActiveRecord->__get('password')
+#2 E:\wamp\www\foxweb\protected\components\UserIdentity.php(40): User->validatePassword('123456')
+#3 E:\wamp\www\foxweb\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#4 E:\wamp\www\yii\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#5 E:\wamp\www\yii\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 E:\wamp\www\yii\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#7 E:\wamp\www\foxweb\protected\controllers\SiteController.php(88): CModel->validate()
+#8 E:\wamp\www\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#9 E:\wamp\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 E:\wamp\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 E:\wamp\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\wamp\www\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#13 E:\wamp\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#14 E:\wamp\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 E:\wamp\www\foxweb\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/foxweb/index.php?r=site/login
+HTTP_REFERER=http://localhost/foxweb/index.php?r=site/login
+---
+2012/10/22 07:44:42 [error] [exception.CException] exception 'CException' with message 'Property "User.password" is not defined.' in E:\wamp\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 E:\wamp\www\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('password')
+#1 E:\wamp\www\foxweb\protected\models\User.php(118): CActiveRecord->__get('password')
+#2 E:\wamp\www\foxweb\protected\components\UserIdentity.php(40): User->validatePassword('123456')
+#3 E:\wamp\www\foxweb\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#4 E:\wamp\www\yii\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#5 E:\wamp\www\yii\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 E:\wamp\www\yii\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#7 E:\wamp\www\foxweb\protected\controllers\SiteController.php(88): CModel->validate()
+#8 E:\wamp\www\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#9 E:\wamp\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 E:\wamp\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 E:\wamp\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\wamp\www\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#13 E:\wamp\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#14 E:\wamp\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 E:\wamp\www\foxweb\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/foxweb/index.php?r=site/login
+HTTP_REFERER=http://localhost/foxweb/index.php?r=site/login
+---
+2012/10/22 07:44:44 [error] [exception.CException] exception 'CException' with message 'Property "User.password" is not defined.' in E:\wamp\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 E:\wamp\www\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('password')
+#1 E:\wamp\www\foxweb\protected\models\User.php(118): CActiveRecord->__get('password')
+#2 E:\wamp\www\foxweb\protected\components\UserIdentity.php(40): User->validatePassword('123456')
+#3 E:\wamp\www\foxweb\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#4 E:\wamp\www\yii\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#5 E:\wamp\www\yii\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 E:\wamp\www\yii\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#7 E:\wamp\www\foxweb\protected\controllers\SiteController.php(88): CModel->validate()
+#8 E:\wamp\www\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#9 E:\wamp\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 E:\wamp\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 E:\wamp\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\wamp\www\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#13 E:\wamp\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#14 E:\wamp\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 E:\wamp\www\foxweb\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/foxweb/index.php?r=site/login
+HTTP_REFERER=http://localhost/foxweb/index.php?r=site/login
+---
+2012/10/22 07:44:45 [error] [exception.CException] exception 'CException' with message 'Property "User.password" is not defined.' in E:\wamp\www\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 E:\wamp\www\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('password')
+#1 E:\wamp\www\foxweb\protected\models\User.php(118): CActiveRecord->__get('password')
+#2 E:\wamp\www\foxweb\protected\components\UserIdentity.php(40): User->validatePassword('123456')
+#3 E:\wamp\www\foxweb\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#4 E:\wamp\www\yii\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#5 E:\wamp\www\yii\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#6 E:\wamp\www\yii\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#7 E:\wamp\www\foxweb\protected\controllers\SiteController.php(88): CModel->validate()
+#8 E:\wamp\www\yii\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#9 E:\wamp\www\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#10 E:\wamp\www\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#11 E:\wamp\www\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\wamp\www\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#13 E:\wamp\www\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#14 E:\wamp\www\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 E:\wamp\www\foxweb\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/foxweb/index.php?r=site/login
+HTTP_REFERER=http://localhost/foxweb/index.php?r=site/login
+---
