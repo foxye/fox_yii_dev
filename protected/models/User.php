@@ -113,5 +113,7 @@ class User extends CActiveRecord
 		));
 	}
 	
-	
+	public function validatePassword($password){
+		return true;
+	}
 }
